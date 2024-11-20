@@ -1,0 +1,27 @@
+rm -rf * && rm -rf .* && git clone https://github.com/Yohop/algo-mat.git . 
+
+
+#To polecenie jest przydatne, gdy chcemy cofnąć swoje zmiany lokalne, które istnieją tylko na naszym dysku.
+#Przykładowo skasowałeś pewne pliki przez przypadek i chcesz je odzyskać z repozytorium.
+git restore
+git restore --staged
+
+
+#To polecenie służy do wprowadzenia zmian w ostatnim commicie 
+#amend zastępuje starego commita nowym (zmienia się hash)
+git commit --amend -m "..."
+git commit --amend --no-edit
+
+
+
+#To polecenie zapisuje chwilowe zmiany, używając \git stash\ można ukryć zmiany,
+#a przez użycie \git stash pop\ mogą się znowu pojawić
+git stash
+
+#To polecenie służy do łączenia branchy 
+git merge
+
+#To rozwiązanie grupuje zmiany według kolejności ich wprowadzania w obrębie jednej gałęzi,
+#a nie według tego kiedy zostały utworzone.
+#https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+git rebase
