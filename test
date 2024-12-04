@@ -1,0 +1,54 @@
+git restore
+Przywraca zmiany z ostatniego commita lub usuwa zmiany w plikach roboczych (ang. working directory).
+
+
+git restore --staged
+Usuwa pliki ze staging area (indeksu), ale nie modyfikuje ich w roboczym katalogu.
+
+git commit --amend -m "..."
+Edytuje ostatni commit, umożliwiając zmianę wiadomości lub dodanie nowych plików.
+
+git commit--amend --no-edit
+Nadpisuje ostatni commit bez zmiany jego wiadomości.
+
+git stash
+Tymczasowo zapisuje zmiany, oczyszczając katalog roboczy, aby móc przełączyć się na inne zadanie.
+
+git merge
+Łączy zmiany z wybranej gałęzi do aktualnej gałęzi.
+
+git rebase
+Przenosi commity z jednej gałęzi na wierzch innej, zachowując liniową historię.
+
+git reset --soft HEAD^
+Cofnięcie ostatniego commita, pozostawiając zmiany w staging area.
+
+git reset --mixed HEAD^
+Cofnięcie ostatniego commita, przenosząc zmiany do katalogu roboczego.
+
+git reset --hard HEAD^
+Usunięcie ostatniego commita oraz wszelkich zmian z katalogu roboczego i staging area.
+
+git rebase -i HEAD~2
+(squash) Łączenie dwóch ostatnich commitów w jeden w celu uproszczenia historii.
+
+git checkout hash_commita
+Przełącza na stan kodu z konkretnego commita (na podstawie jego hasha).
+
+git branch -d
+Usuwa lokalną gałąź, jeśli została zmergowana do innej gałęzi.
+
+git branch -D
+Wymusza usunięcie lokalnej gałęzi, nawet jeśli nie została zmergowana.
+
+git revert
+Tworzy nowy commit cofający zmiany wprowadzone przez wybrany commit.
+
+git rm
+Usuwa pliki z katalogu roboczego i staging area.
+
+git rm --cached
+Usuwa pliki ze staging area, pozostawiając je w katalogu roboczym.
+
+git archive
+Tworzy archiwum (np. ZIP) z wybraną wersją projektu, bez repozytorium Git.
